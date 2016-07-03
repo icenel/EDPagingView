@@ -13,12 +13,12 @@ scrollView.addSubview(yourSecondPageView)
 ```
 
 Yes, it works, but the views are not cached and not reusable. Adding more and more view, will cause choppy scrolling animation.
-Not only that, the memory used is increasing everytime you add subviews. Imagine you have 10,000 subviews in the scrollviews lazy loaded, that takes a huge memory consumption.
+Not only that, the memory used is increasing everytime you add subviews. Imagine you have 10,000 subviews in the scrollviews lazy loaded, that takes a considerable memory consumption.
 
 ##Solution
 With <b>EDPagingView</b>, your pages are automatically cached. And you can use reusable identifier to reuse the page.<br>
 Whether you have thousands of view or just a few images, scrolling performance is always great. <br>
-If you have thousands of views, EDPagingView will reduce the memory consumpotion by <b>99.8</b>%
+If you have thousands of views, <b>EDPagingView</b> will reduce the memory consumpotion by <b>99.8</b>%
 
 ##Advantages
 
@@ -28,6 +28,13 @@ If you have thousands of views, EDPagingView will reduce the memory consumpotion
 - Adding and removing page
 - Better memory consumption
 - Uses delegate design pattern
+
+##Layout
+
+<img src="https://raw.githubusercontent.com/icenel/EDPagingView/assets/layout.jpg">
+
+The picture above is how the layout looks like when displaying 100 views. The green view is the page and the white view behind it it the scroll view.
+<b>EDPagingView</b> only adds pages that are visible on the screen as subviews and never stores the invisible pages in the memory.
 
 ##Requirements
 
