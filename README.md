@@ -13,7 +13,7 @@ scrollView.addSubview(yourSecondPageView)
 ```
 
 Yes, it works, but the views are not cached and not reusable. Adding more and more view, will cause choppy scrolling animation.
-Not only that, the memory used is increasing everytime you add subviews. Imagine you have 10,000 subviews in the scrollviews lazy loaded, that takes a considerable memory consumption.
+Not only that, the memory used is increasing everytime you add subviews. Imagine you have 10,000 subviews in the scrollview lazy loaded, that takes a considerable memory consumption.
 
 ##Solution
 With <b>EDPagingView</b>, your pages are automatically cached. And you can use reusable identifier to reuse the page.<br>
@@ -33,7 +33,7 @@ If you have thousands of views, <b>EDPagingView</b> will reduce the memory consu
 
 <img src="https://raw.githubusercontent.com/icenel/EDPagingView/assets/layout.jpg">
 
-The picture above is how the layout looks like when displaying 100 views. The green view is the page and the white view behind it it the scroll view.
+The picture above shows how the layout looks like when displaying 100 views. The green view is the page and the white view behind it is the scroll view.
 <b>EDPagingView</b> only adds pages that are visible on the screen as subviews and never stores the invisible pages in the memory.
 
 ##Requirements
@@ -62,7 +62,7 @@ func numberOfPagesInPagingView(pagingView: EDPagingView) -> Int {
 }
 
 func pagingView(pagingView: EDPagingView, pageForPageIndex index: Int) -> EDPagingViewPage {
-    var page = pagingView.dequeueReusablePageWithIdentifier(Constants.pageIdentifier)
+    var page = pagingView.dequeueReusablePageWithIdentifier("your identifier")
     if page == nil {
         page = EDPagingViewPage(reuseIdentifier: "your identifier")
     }
