@@ -60,6 +60,9 @@ public class EDPagingView: UIScrollView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.pagingEnabled = true
+        self.showsVerticalScrollIndicator = false
+        self.showsHorizontalScrollIndicator = false
+        self.delaysContentTouches = false
     }
 }
 
@@ -173,7 +176,7 @@ public extension EDPagingView {
     private func setContentSize() {
         _numberOfPages = dataSource?.numberOfPagesInPagingView?(self) ?? 0
         let width = self.bounds.width * CGFloat(_numberOfPages)
-        self.contentSize = CGSize(width: width, height: self.bounds.height)
+        self.contentSize = CGSize(width: width, height: 0)
     }
     
     public func scrollToFirstPage() {
