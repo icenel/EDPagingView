@@ -135,6 +135,7 @@ public extension EDPagingView {
                     availablePages.removeValueForKey(pageIndex)
                     
                     page.frame = rectForPageIndex(pageIndex)
+                    page.setNeedsLayout()
                     self.addSubview(page)
                 }
             }

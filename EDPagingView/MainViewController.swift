@@ -57,9 +57,9 @@ extension MainViewController: EDPagingViewDataSource {
     }
     
     func pagingView(pagingView: EDPagingView, pageForPageIndex index: Int) -> EDPagingViewPage {
-        var page = pagingView.dequeueReusablePageWithIdentifier(Constants.pageIdentifier)
+        var page = pagingView.dequeueReusablePageWithIdentifier(Constants.pageIdentifier) as? MyPage
         if page == nil {
-            page = EDPagingViewPage(reuseIdentifier: Constants.pageIdentifier)
+            page = MyPage(reuseIdentifier: Constants.pageIdentifier)
         }
         
         /*
@@ -71,6 +71,7 @@ extension MainViewController: EDPagingViewDataSource {
         page!.contentView.backgroundColor = UIColor(hue: 1.0 * CGFloat(index) / CGFloat(pagingView.numberOfPages),
                                                     saturation: 1.0,
                                                     brightness: 1.0, alpha: 1.0)
+        page!.titleLabel.text = "Page \(index + 1)"
         
         return page!
     }

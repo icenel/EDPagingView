@@ -14,6 +14,7 @@
 		8FC7F95D1D29789C0069CD42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC7F95C1D29789C0069CD42 /* Assets.xcassets */; };
 		8FC7F9601D29789C0069CD42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FC7F95E1D29789C0069CD42 /* LaunchScreen.storyboard */; };
 		8FC7F9A61D2979980069CD42 /* UIImage+ButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC7F9A51D2979980069CD42 /* UIImage+ButtonImage.swift */; };
+		8FF220201D2A0D490014A145 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF2201F1D2A0D490014A145 /* MyPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8FC7F95F1D29789C0069CD42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FC7F9611D29789C0069CD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC7F9A51D2979980069CD42 /* UIImage+ButtonImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ButtonImage.swift"; sourceTree = "<group>"; };
+		8FF2201F1D2A0D490014A145 /* MyPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				8FC7F9551D29789C0069CD42 /* AppDelegate.swift */,
 				8FC7F9571D29789C0069CD42 /* MainViewController.swift */,
+				8FF2201F1D2A0D490014A145 /* MyPage.swift */,
 				8FC7F9A51D2979980069CD42 /* UIImage+ButtonImage.swift */,
 				8FC7F95C1D29789C0069CD42 /* Assets.xcassets */,
 				8FC7F95E1D29789C0069CD42 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			files = (
 				8FC7F9581D29789C0069CD42 /* MainViewController.swift in Sources */,
 				8F6F045C1D299BD000F76E37 /* EDPagingViewPage.swift in Sources */,
+				8FF220201D2A0D490014A145 /* MyPage.swift in Sources */,
 				8FC7F9A61D2979980069CD42 /* UIImage+ButtonImage.swift in Sources */,
 				8FC7F9561D29789C0069CD42 /* AppDelegate.swift in Sources */,
 				8F6F045B1D299BD000F76E37 /* EDPagingView.swift in Sources */,
