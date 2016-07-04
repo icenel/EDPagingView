@@ -105,6 +105,7 @@ pagingView.reloadData()
 ###Scrolling
 
 ```
+pagingView.scrollToPageWithIndex(3, animated: true) 
 pagingView.scrollToFirstPageAnimated(true)
 pagingView.scrollToLastPageAnimated(true)
 ```
