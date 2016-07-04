@@ -36,7 +36,7 @@ public class EDPagingView: UIScrollView {
         didSet {
             if let newValue = delegate {
                 /*
-                 * Swift doesn't support overriding inherited properties with different type
+                 * Swift doesn't support overrididing inherited properties with different type
                  * like Objective C Does, therefore we need internal delegate.
                  */
                 internalDelegate = unsafeBitCast(newValue, EDPagingViewDelegate.self)
@@ -196,7 +196,7 @@ public extension EDPagingView {
     }
     
     public func scrollToPageWithIndex(index: Int, animated: Bool) {
-        self.scrollRectToVisible(rectForPageIndex(index), animated: animated)
+        self.setContentOffset(rectForPageIndex(index).origin, animated: animated)
     }
 }
 
