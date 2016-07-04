@@ -18,7 +18,7 @@ Not only that, the memory used is increasing everytime you add subviews. Imagine
 ##Solution
 With <b>EDPagingView</b>, your pages are automatically cached. And you can use reusable identifier to reuse the page.<br>
 Whether you have thousands of view or just a few images, scrolling performance is always great. <br>
-If you have thousands of views, <b>EDPagingView</b> will reduce the memory consumpotion by <b>99.8</b>%
+If you have thousands of views, <b>EDPagingView</b> will reduce the memory consumpotion by <b>99.8</b>%.
 
 ##Advantages
 
@@ -77,7 +77,7 @@ func pagingView(pagingView: EDPagingView, pageForPageIndex index: Int) -> EDPagi
 }
 ```
 
-###Subclassing EDPagingView
+###Subclassing EDPagingViewPage
 
 ```
 class MyPage: EDPagingViewPage {
