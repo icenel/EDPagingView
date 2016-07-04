@@ -112,14 +112,14 @@ pagingView.scrollToLastPageAnimated(true)
 ###Get Current Page
 
 ```
-let currentPage = paggingView.currentPage
+let currentPage = pagingView.currentPage
 ```
 
 ###Get Number of Pages
 
 ```
-let numberOfPages = paggingView.numberOfPages
+let numberOfPages = pagingView.numberOfPages
 ```
 
 ##Note
-<b>EDPagingView</b> is a subclass of <b>UIScrollView</b>. So you can use UIScrollView delegate to receive scrolling events.
+<b>EDPagingView</b> is a subclass of <b>UIScrollView</b>. Therefore, you can use UIScrollView delegate to receive scrolling events.
