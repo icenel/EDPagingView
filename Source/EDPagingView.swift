@@ -18,7 +18,18 @@ import UIKit
 }
 
 public class EDPagingView: UIScrollView {
-    public var backgroundView: UIView?
+    public var backgroundView: UIView? {
+        willSet {
+            if newValue != nil {
+                backgroundView?.removeFromSuperview()
+            }
+        }
+        didSet {
+            if backgroundView != nil {
+                self.insertSubview(backgroundView!, atIndex: 0)
+            }
+        }
+    }
     
     public weak var dataSource: EDPagingViewDataSource?
     override public var delegate: UIScrollViewDelegate? {
@@ -52,7 +63,7 @@ public class EDPagingView: UIScrollView {
     }
 }
 
-// MARK: - Computed Properties & Observing Properties
+// MARK: - Computed & Observing Properties
 
 public extension EDPagingView {
     public var numberOfPages: Int {
@@ -173,11 +184,15 @@ public extension EDPagingView {
     }
     
     public func scrollToFirstPageAnimated(animated: Bool) {
-        self.setContentOffset(CGPoint(x: 0, y: 0), animated: animated)
+        scrollToPageWithIndex(0, animated: animated)
     }
     
     public func scrollToLastPageAnimated(animated: Bool) {
-        self.setContentOffset(CGPoint(x: self.contentSize.width - self.bounds.width, y: 0), animated: animated)
+        scrollToPageWithIndex(_numberOfPages - 1, animated: animated)
+    }
+    
+    public func scrollToPageWithIndex(index: Int, animated: Bool) {
+        self.scrollRectToVisible(rectForPageIndex(index), animated: animated)
     }
 }
 

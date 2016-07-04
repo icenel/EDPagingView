@@ -23,6 +23,10 @@ class MainViewController: UIViewController {
         addPageButton.setImage(UIImage.addButtonImage(), forState: .Normal)
         addPageButton.addTarget(self, action: #selector(addPage), forControlEvents: .TouchUpInside)
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.blueColor()
+        pagingView.backgroundView = backgroundView
+        
         self.view.addSubview(pagingView)
         self.view.addSubview(addPageButton)
         
